@@ -3,18 +3,20 @@
     display: flex;
 
     .left{
-        flex: .5;
+        flex: 0.5;
         overflow: hidden;
 
         .imgContainer{
-            width: 700px;
-            height: 700px;
+            width: 1200px;
+            height: 1200px;
             background-color: black;
             border-radius: 70%;
             display: flex;
             align-items: flex-end;
             justify-content: center;
             float: right;
+            position: relative;
+            padding: 50px;
 
             img{
                 height: 90%;
@@ -43,15 +45,33 @@
             }
             h3{
                 font-size: 30px;
+
+                span{
+                    font-size: inherit;
+                    color: crimson;
+                }
+
+                .ityped-cursor{
+                    animation: blink 1s infinite;
+                }
+
+                @keyframes blink {
+                    50%{
+                        opacity: 1;
+                    }
+                    100%{
+                        opacity: 0;
+                    }
+                }
             }
         }
         a{
             position: absolute;
             bottom: 10px;
-            left: 40%
+            left: 40%;
 
             img{
-                width: 30px;
+                width: 70px;
                 animation: arrowBlink 2s infinite;
             }
 
